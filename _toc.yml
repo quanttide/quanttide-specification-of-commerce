@@ -1,0 +1,15 @@
+format: jb-book
+root: index.md
+chapters: 
+  - file: balances/README.md
+    sections:
+      - file: balances/wallet.md
+      - file: balances/currency.md
+      - file: balances/balance.md
+  - file: commodities/README.md
+    sections:
+      - file: commodities/commodity.md
+  - file: transactions/README.md
+    sections:
+      - file: transactions/order.md
+      - file: transactions/transaction.md
