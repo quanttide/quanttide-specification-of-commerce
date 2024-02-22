@@ -4,6 +4,7 @@ chapters:
   - file: payments/README.md
     sections: 
       - file: payments/currency.md
+      - file: payments/institution.md
   - file: balances/README.md
     sections:
       - file: balances/wallet.md
