@@ -8,7 +8,6 @@ chapters:
   - file: balances/README.md
     sections:
       - file: balances/wallet.md
-      - file: balances/currency.md
       - file: balances/balance.md
   - file: commodities/README.md
     sections:
