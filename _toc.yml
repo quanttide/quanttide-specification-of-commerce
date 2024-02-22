@@ -16,3 +16,7 @@ chapters:
     sections:
       - file: transactions/order.md
       - file: transactions/transaction.md
+  - file: discounts/README.md
+    sections:
+      - file: discounts/coupon.md
+      - file: discounts/vendor.md
