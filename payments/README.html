@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>余额 &#8212; 量潮交易工程标准</title>
+    <title>支付管理 &#8212; 量潮交易工程标准</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'balances/balance';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'payments/README';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="商品管理" href="../commodities/README.html" />
-    <link rel="prev" title="钱包" href="wallet.html" />
+    <link rel="next" title="货币" href="currency.html" />
+    <link rel="prev" title="简介" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,13 +171,13 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../payments/README.html">支付管理</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../payments/currency.html">货币</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">支付管理</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="currency.html">货币</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">余额管理</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="wallet.html">钱包</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">余额</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../balances/README.html">余额管理</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../balances/wallet.html">钱包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balances/balance.html">余额</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../commodities/README.html">商品管理</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -243,7 +243,7 @@
       
       
       
-      <li><a href="../_sources/balances/balance.md" target="_blank"
+      <li><a href="../_sources/payments/README.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +325,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>余额</h1>
+    <h1>支付管理</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -340,15 +340,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>余额<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>余额(<code class="docutils literal notranslate"><span class="pre">Balance</span></code>)定义为钱包币种映射（Wallet-Currency Mapping），即一组币种和余额的值。</p>
-<p>字段定义如下：</p>
-<ul class="simple">
-<li><p>ID(<code class="docutils literal notranslate"><span class="pre">id</span></code>)</p></li>
-<li><p>钱包(<code class="docutils literal notranslate"><span class="pre">wallet</span></code>):</p></li>
-<li><p>币种(<code class="docutils literal notranslate"><span class="pre">currency</span></code>):</p></li>
-<li><p>余额(<code class="docutils literal notranslate"><span class="pre">balance</span></code>):</p></li>
-</ul>
+<h1>支付管理<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -364,7 +358,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./balances"
+            path: "./payments"
         },
         predefinedOutput: true
     }
@@ -382,20 +376,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="wallet.html"
+       href="../index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">钱包</p>
+        <p class="prev-next-title">简介</p>
       </div>
     </a>
     <a class="right-next"
-       href="../commodities/README.html"
+       href="currency.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">商品管理</p>
+        <p class="prev-next-title">货币</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
