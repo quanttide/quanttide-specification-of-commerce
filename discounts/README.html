@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>商品 &#8212; 量潮交易工程标准</title>
+    <title>折扣券管理 &#8212; 量潮交易工程标准</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'commodities/commodity';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'discounts/README';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="交易管理" href="../transactions/README.html" />
-    <link rel="prev" title="商品管理" href="README.html" />
+    <link rel="next" title="优惠券" href="coupon.html" />
+    <link rel="prev" title="交易记录" href="../transactions/transaction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,8 +181,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../balances/balance.html">余额</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">商品管理</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">商品</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../commodities/README.html">商品管理</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commodities/commodity.html">商品</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../transactions/README.html">交易管理</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -190,9 +190,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../transactions/transaction.html">交易记录</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../discounts/README.html">折扣券管理</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../discounts/coupon.html">优惠券</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../discounts/vendor.html">代金券</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">折扣券管理</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="coupon.html">优惠券</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vendor.html">代金券</a></li>
 </ul>
 </li>
 </ul>
@@ -249,7 +249,7 @@
       
       
       
-      <li><a href="../_sources/commodities/commodity.md" target="_blank"
+      <li><a href="../_sources/discounts/README.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +331,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>商品</h1>
+    <h1>折扣券管理</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -346,13 +346,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>商品<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>商品（<code class="docutils literal notranslate"><span class="pre">Commodity</span></code>）通常指的是可以买卖的产品，这些产品可以是实体物品，也可以是无形的。</p>
-<p>包括以下两种类型：</p>
-<ol class="arabic simple">
-<li><p><strong>产品（<code class="docutils literal notranslate"><span class="pre">Product</span></code>）</strong>：产品是指具有特定功能和用途的实体物品或服务。它可以是有形的，如手机、汽车、家具等，也可以是无形的，如软件、音乐、书籍等。</p></li>
-<li><p><strong>服务（<code class="docutils literal notranslate"><span class="pre">Service</span></code>）</strong>：服务是指提供的工作或活动，通常是为了满足人们的需求或愿望。服务是无形的，如金融服务、医疗服务、教育服务、娱乐服务等。</p></li>
-</ol>
+<h1>折扣券管理<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -368,7 +364,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./commodities"
+            path: "./discounts"
         },
         predefinedOutput: true
     }
@@ -386,20 +382,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="README.html"
+       href="../transactions/transaction.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">商品管理</p>
+        <p class="prev-next-title">交易记录</p>
       </div>
     </a>
     <a class="right-next"
-       href="../transactions/README.html"
+       href="coupon.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">交易管理</p>
+        <p class="prev-next-title">优惠券</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
