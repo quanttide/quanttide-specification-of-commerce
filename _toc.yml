@@ -1,6 +1,9 @@
 format: jb-book
 root: index.md
 chapters: 
+  - file: payments/README.md
+    sections: 
+      - file: payments/currency.md
   - file: balances/README.md
     sections:
       - file: balances/wallet.md
