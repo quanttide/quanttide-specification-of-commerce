@@ -5,6 +5,7 @@ chapters:
     sections: 
       - file: payments/currency.md
       - file: payments/institution.md
+      - file: payments/transaction.md
   - file: balances/README.md
     sections:
       - file: balances/wallet.md
@@ -12,10 +13,9 @@ chapters:
   - file: commodities/README.md
     sections:
       - file: commodities/commodity.md
-  - file: transactions/README.md
+  - file: orders/README.md
     sections:
-      - file: transactions/order.md
-      - file: transactions/transaction.md
+      - file: orders/order.md
   - file: discounts/README.md
     sections:
       - file: discounts/coupon.md
