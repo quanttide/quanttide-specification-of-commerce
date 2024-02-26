@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>交易管理 &#8212; 量潮交易工程标准</title>
+    <title>订单 &#8212; 量潮交易工程标准</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'transactions/README';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'orders/order';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="订单" href="order.html" />
-    <link rel="prev" title="商品" href="../commodities/commodity.html" />
+    <link rel="next" title="折扣券管理" href="../discounts/README.html" />
+    <link rel="prev" title="交易管理" href="README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,6 +174,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../payments/README.html">支付管理</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../payments/currency.html">货币</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../payments/institution.html">支付机构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../payments/transaction.html">交易记录</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../balances/README.html">余额管理</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -185,9 +186,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../commodities/commodity.html">商品</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">交易管理</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="order.html">订单</a></li>
-<li class="toctree-l2"><a class="reference internal" href="transaction.html">交易记录</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">交易管理</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">订单</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../discounts/README.html">折扣券管理</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -249,7 +249,7 @@
       
       
       
-      <li><a href="../_sources/transactions/README.md" target="_blank"
+      <li><a href="../_sources/orders/order.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +331,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>交易管理</h1>
+    <h1>订单</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -346,9 +346,25 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>交易管理<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+<h1>订单<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>订单（<code class="docutils literal notranslate"><span class="pre">Order</span></code>）是买家请求购买商品或服务的记录。</p>
+<p>它通常包括以下属性：</p>
+<ul class="simple">
+<li><p>订单ID：唯一标识符，用于引用特定的订单。</p></li>
+<li><p>买家信息：买家的姓名、地址、联系方式等。</p></li>
+<li><p>订单项：订单中包含的一个或多个商品或服务。</p></li>
+<li><p>订单总额：所有订单项价格的总和。</p></li>
+<li><p>订单状态：订单的处理状态，如待支付、已支付、配送中、已完成等。</p></li>
+<li><p>下单时间：订单创建的时间戳。</p></li>
+<li><p>支付方式：买家选择的支付方式，如信用卡、PayPal等。</p></li>
+</ul>
+<p>订单可能涉及的行为包括：</p>
+<ul class="simple">
+<li><p>创建订单：根据买家选择的商品或服务创建一个新的订单。</p></li>
+<li><p>更新订单：修改订单的详细信息，如更改地址或支付方式。</p></li>
+<li><p>取消订单：在订单被处理之前，买家或卖家可以取消订单。</p></li>
+<li><p>支付订单：买家完成支付，将订单状态更新为已支付。</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -364,7 +380,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./transactions"
+            path: "./orders"
         },
         predefinedOutput: true
     }
@@ -382,20 +398,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../commodities/commodity.html"
+       href="README.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">商品</p>
+        <p class="prev-next-title">交易管理</p>
       </div>
     </a>
     <a class="right-next"
-       href="order.html"
+       href="../discounts/README.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">订单</p>
+        <p class="prev-next-title">折扣券管理</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -174,6 +174,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">支付管理</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">货币</a></li>
 <li class="toctree-l2"><a class="reference internal" href="institution.html">支付机构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">交易记录</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../balances/README.html">余额管理</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -185,9 +186,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../commodities/commodity.html">商品</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../transactions/README.html">交易管理</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../transactions/order.html">订单</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../transactions/transaction.html">交易记录</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../orders/README.html">交易管理</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../orders/order.html">订单</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../discounts/README.html">折扣券管理</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -320,7 +320,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -336,6 +338,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">法定货币</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">加密货币</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">自定义货币</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -347,22 +359,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>货币<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>货币（<code class="docutils literal notranslate"><span class="pre">Currency</span></code>）包括法币（Fiat Currency）和虚拟货币（Virtual Currency）。</p>
-<p>币种实体应该包含币种的唯一标识（如ISO 4217代码）、名称、符号、当前汇率（相对于其他币种）等属性。</p>
-<p>法定货币（Legal Tender）：</p>
-<ul class="simple">
-<li><p>法币是由政府发行的、被广泛接受的货币形式。</p></li>
-<li><p>它不是由任何实物（如黄金或银）支持，而是依赖于政府的信用和法定地位。</p></li>
-<li><p>法币通常用于日常交易、支付债务、税金等。</p></li>
-<li><p>例子包括美元（USD）、欧元（EUR）、日元（JPY）等。</p></li>
-</ul>
-<p>加密货币（Cryptocurrency）：</p>
-<ul class="simple">
-<li><p>加密货币是一种数字形式的交换媒介，通常在私人网络中运作，不受中央银行或政府的直接控制。</p></li>
-<li><p>它可以用来购买商品或服务，也可以作为一种投资。</p></li>
-<li><p>加密货币通常通过加密技术保护交易和资金安全。</p></li>
-<li><p>例子包括比特币（BTC）、以太坊（ETH）、瑞波币（XRP）等。</p></li>
-</ul>
+<p>货币（<code class="docutils literal notranslate"><span class="pre">Currency</span></code>）是指一种广泛用作交换媒介、支付手段和价值衡量单位的通用接受物。
+货币包括法定货币（<code class="docutils literal notranslate"><span class="pre">FiatCurrency</span></code>）、加密货币（<code class="docutils literal notranslate"><span class="pre">Cryptocurrency</span></code>）和自定义货币（<code class="docutils literal notranslate"><span class="pre">CustomCurrency</span></code>）。</p>
+<section id="id2">
+<h2>法定货币<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>法定货币简称法币，是通过政府法令使其成为合法通货的货币，如人民币、美元、欧元等。</p>
+<p>法定货币包含币种的唯一标识（如ISO 4217代码）、名称、符号、当前汇率（相对于其他币种）等属性。</p>
+</section>
+<section id="id3">
+<h2>加密货币<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>加密货币是一种使用密码学原理来确保交易安全及控制交易单位创造的交易介质。</p>
+</section>
+<section id="id4">
+<h2>自定义货币<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>自定义货币是指在特定的环境或系统中创建和使用的货币形式，如Q币、游戏系统中的虚拟货币等。</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -420,7 +431,22 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">法定货币</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">加密货币</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">自定义货币</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
