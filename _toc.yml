@@ -16,6 +16,7 @@ chapters:
   - file: orders/README.md
     sections:
       - file: orders/order.md
+      - file: orders/order_lifecycle.md
   - file: discounts/README.md
     sections:
       - file: discounts/coupon.md
